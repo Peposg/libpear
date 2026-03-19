@@ -33,23 +33,6 @@ void pt_delete(pear_t* pt){
     free(pt);
 }
 
-//function: generation of hash code for each char
-int pt_hash(char* k, int prime, int size){
-    int i = 0, h = 0;
-    while(k[i] != '\0'){
-        h = (h * prime + (long)k[i]) % size;
-        i++;
-    }
-    return (int)h; 
-}
-
-//function: double hashing function
-int pt_get_hash(char* k, int apt, int size){
-    int h1 = pt_hash(k, PRIME, size);
-    int h2 = pt_hash(k, PRIME1, size);
-    return (h1 + apt * h2)%size;
-}
-
 //function: insertion of a pair
 void insert_p(pear_t* pt, char* k, char* v){
 
@@ -120,4 +103,21 @@ pear_t* pt_resize(pear_t* pt, int n_size){
     pt_delete(n_pt);
     
     return pt;
+}
+
+//function: generation of hash code for each char
+static int pt_hash(char* k, int prime, int size){
+    int i = 0, h = 0;
+    while(k[i] != '\0'){
+        h = (h * prime + (long)k[i]) % size;
+        i++;
+    }
+    return (int)h; 
+}
+
+//function: double hashing function
+static int pt_get_hash(char* k, int apt, int size){
+    int h1 = pt_hash(k, PRIME, size);
+    int h2 = pt_hash(k, PRIME1, size);
+    return (h1 + apt * h2)%size;
 }

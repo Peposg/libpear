@@ -20,12 +20,6 @@ pear_t* pt_new();
 //define: deletion of "pt" table
 void pt_delete(pear_t* pt);
 
-//define: generation of hash
-int pt_hash(char* k, int prime, int size);
-
-//define: double hashing 
-int pt_get_hash(char* k, int apt, int size);
-
 //define: insertion of pair
 void insert_p(pear_t* pt, char* k, char* v);
 
@@ -37,5 +31,11 @@ int delete_p(pear_t* pt, char* k);
 
 //define: resize of hash table
 pear_t* pt_resize(pear_t* pt, int n_size);
+
+//define: generation of hash
+//static int pt_hash(char* k, int prime, int size);
+
+//define: double hashing 
+//static int pt_get_hash(char* k, int apt, int size);
 
  #endif
