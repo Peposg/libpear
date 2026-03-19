@@ -1,4 +1,6 @@
-# libpear
+![libpear banner](banner.png)
+
+# libpear 🍐
 
 A lightweight hash table library written in C, built from scratch. Supports
 key-value pair storage with double hashing for collision resolution and
