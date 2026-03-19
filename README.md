@@ -111,4 +111,4 @@ pt_delete(pt);
 
 ## Maintainers
 
-- Peposg - [Peposg](https://github.com/Peposg)
+- Sam - [Peposg](https://github.com/Peposg)
