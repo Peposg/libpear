@@ -1,4 +1,4 @@
-![libpear banner](b2.png)
+![libpear banner](b.png)
 
 # libpear 🍐
 
